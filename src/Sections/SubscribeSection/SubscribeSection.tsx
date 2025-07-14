@@ -1,8 +1,4 @@
 import React from "react";
-import { ArrowRight } from "lucide-react";
-import { Button } from "../../ui/button";
-import { Card, CardContent } from "../../ui/card";
-import { Input } from "../../ui/input";
 
 export const SubscribeSection = (): JSX.Element => {
   const subscriptionData = {
@@ -12,13 +8,13 @@ export const SubscribeSection = (): JSX.Element => {
   };
 
   return (
-    <section class="w-full py-10 bg-gray-100 sm:py-16 lg:py-24">
+    <section class="w-full py-10 bg-[#171616] sm:py-16 lg:py-24">
       <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div class="max-w-2xl mx-auto text-left sm:text-center">
-          <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
+          <h2 class="text-3xl font-bold leading-tight text-[#bae800] sm:text-4xl lg:text-5xl">
             Get full access to Celebration
           </h2>
-          <p class="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">
+          <p class="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-200">
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit. Exercitation
             veniam consequat sunt nostrud amet.
@@ -40,8 +36,8 @@ export const SubscribeSection = (): JSX.Element => {
               />
             </svg>
             <div class="ml-4">
-              <h3 class="text-xl font-semibold text-black">130+ Blocks</h3>
-              <p class="mt-1.5 text-base text-gray-600">Ready to use</p>
+              <h3 class="text-xl font-semibold text-[#bae800]">Updated content</h3>
+              
             </div>
           </div>
 
@@ -59,8 +55,8 @@ export const SubscribeSection = (): JSX.Element => {
               />
             </svg>
             <div class="ml-4">
-              <h3 class="text-xl font-semibold text-black">14 Pages</h3>
-              <p class="mt-1.5 text-base text-gray-600">Make it live</p>
+              <h3 class="text-xl font-semibold text-[#bae800]">Latest News</h3>
+             
             </div>
           </div>
 
@@ -78,14 +74,14 @@ export const SubscribeSection = (): JSX.Element => {
               />
             </svg>
             <div class="ml-4">
-              <h3 class="text-xl font-semibold text-black">Easy Access</h3>
-              <p class="mt-1.5 text-base text-gray-600">Anyone can use</p>
+              <h3 class="text-xl font-semibold text-[#bae800]">Easy Access</h3>
+              
             </div>
           </div>
         </div>
 
         <form action="#" method="POST" class="max-w-xl mx-auto mt-12">
-          <div class="sm:p-2 sm:bg-white sm:border-2 sm:border-transparent sm:rounded-full sm:focus-within:border-blue-600 sm:focus-within:ring-1 sm:focus-within:ring-blue-600">
+          <div class="sm:p-2 sm:bg-white sm:border-2 sm:border-transparent sm:rounded-full sm:focus-within:border-[#bae800] sm:focus-within:ring-1 sm:focus-within:ring-[#bae800]">
             <div class="flex flex-col items-start sm:flex-row sm:justify-center">
               <div class="flex-1 w-full min-w-0">
                 <div class="relative text-gray-400 focus-within:text-gray-600">
@@ -111,7 +107,7 @@ export const SubscribeSection = (): JSX.Element => {
                     name="email"
                     id="email"
                     placeholder="Enter email address"
-                    class="block w-full py-4 pl-10 pr-4 text-base text-black placeholder-gray-500 transition-all duration-200 border-transparent rounded-full focus:border-transparent focus:ring-0 caret-blue-600"
+                    class="block w-full py-4 pl-10 pr-4 text-base text-black placeholder-gray-500 transition-all duration-200 border-transparent rounded-full focus:border-transparent focus:ring-0 caret-[#89a710]"
                     required=""
                   />
                 </div>
@@ -119,7 +115,7 @@ export const SubscribeSection = (): JSX.Element => {
 
               <button
                 type="submit"
-                class="inline-flex items-center justify-center w-auto px-4 py-4 mt-4 font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-full sm:ml-4 sm:mt-0 sm:w-auto hover:bg-blue-700 focus:bg-blue-700"
+                class="inline-flex items-center justify-center w-auto px-4 py-4 mt-4 font-semibold text-white transition-all duration-200 bg-[#bae800] border border-transparent rounded-full sm:ml-4 sm:mt-0 sm:w-auto hover:bg-[#89a710] focus:bg-[#89a710]"
               >
                 Get instant access
                 <svg

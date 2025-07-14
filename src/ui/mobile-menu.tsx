@@ -63,7 +63,7 @@ export const MobileMenu = ({
                     className={`
                       w-full text-left font-body-font-body-md text-lg hover:text-[#bae800] transition-colors py-2
                       ${(currentPage === 'home' && item.label === 'Home') || 
-                        (currentPage === 'linktree' && item.label === 'AI Link')
+                        (currentPage === 'linktree' && item.label === 'Ai Links')
                         ? 'text-[#bae800]' 
                         : 'text-white'
                       }

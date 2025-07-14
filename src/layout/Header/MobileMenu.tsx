@@ -45,7 +45,7 @@ export const MobileMenu = ({
                 onClick={() => onNavClick(item)}
                 className={`text-left py-3 px-4 rounded-lg transition-colors ${
                   (currentPage === 'home' && item.label === 'Home') || 
-                  (currentPage === 'linktree' && item.label === 'AI Link')
+                  (currentPage === 'linktree' && item.label === 'Ai Links')
                     ? 'text-[#bae800] bg-[#bae800]/10' 
                     : 'text-white hover:text-[#bae800] hover:bg-[#bae800]/5'
                 }`}

@@ -112,7 +112,7 @@ export const Header = ({ currentPage = 'home' }: HeaderProps): JSX.Element => {
                     <Link
                       to={item.href}
                       className={`font-body-font-body-md hover:text-[#bae800] transition-colors whitespace-nowrap ${
-                        (currentPage === 'linktree' && item.label === 'AI Link') ? 'text-[#bae800]' : 'text-white'
+                        (currentPage === 'linktree' && item.label === 'Ai Links') ? 'text-[#bae800]' : 'text-white'
                       }`}
                       onClick={() => setIsMobileMenuOpen(false)}
                     >

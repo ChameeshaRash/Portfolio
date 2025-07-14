@@ -1,41 +1,52 @@
 import React from "react";
-import { Card, CardContent } from "../../ui/card";
 
 export const FooterSection = (): JSX.Element => {
 
   return (
-    <section className="bg-[#0B1120] text-white py-10">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center md:items-start gap-6">
-        {/* Logo & Nav */}
-        <div className="flex flex-col items-center md:items-start">
-          <div className="flex items-center space-x-2">
-            <div className="w-4 h-4 rounded-full bg-blue-600"></div>
-            <span className="text-lg font-semibold">ClarityUI</span>
-          </div>
-          <nav className="mt-4 flex space-x-6 text-sm text-gray-300">
-            <a href="#">Product</a>
-            <a href="#">Features</a>
-            <a href="#">Pricing</a>
-            <a href="#">Resources</a>
-          </nav>
+    <footer className="bg-[#0e0e0e] text-[#d6d6d6] pt-10 pb-6 px-4">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-8 md:gap-0">
+        {/* Logo */}
+        <div className="flex items-center gap-3 mb-6 md:mb-0">
+          <img src="/bmc-logo.png" alt="TIP Voyage Logo" className="w-10 h-10" />
+          <span className="text-2xl font-bold text-white tracking-tight">TIP Voyage</span>
         </div>
 
+        {/* Navigation */}
+        <nav className="flex flex-wrap justify-center gap-6 text-base font-medium">
+          <a href="/" className="hover:text-[#bae800] transition-colors">Home</a>
+          <a href="/?scrollTo=services" className="hover:text-[#bae800] transition-colors">Services</a>
+          <a href="/?scrollTo=collaborations" className="hover:text-[#bae800] transition-colors">Collabs</a>
+          <a href="/linktree" className="hover:text-[#bae800] transition-colors">Ai Links</a>
+          <a href="/?scrollTo=products" className="hover:text-[#bae800] transition-colors">Products</a>
+        </nav>
+
         {/* Social Icons */}
-        <div className="flex space-x-4">
-          <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-twitter"></i></a>
-          <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-facebook-f"></i></a>
-          <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-instagram"></i></a>
-          <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-github"></i></a>
+        <div className="flex gap-3 mt-6 md:mt-0">
+          <a href="https://youtube.com/@tipvoyage" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="bg-[#161616] rounded-full p-2 shadow hover:bg-[#bae800] transition-colors group">
+            <img src="/yt.svg" alt="YouTube" className="w-5 h-5 group-hover:scale-110 transition-transform" />
+          </a>
+          <a href="https://tiktok.com/@tipvoyage" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="bg-[#161616] rounded-full p-2 shadow hover:bg-[#bae800] transition-colors group">
+            <img src="/tiktok.svg" alt="TikTok" className="w-5 h-5 group-hover:scale-110 transition-transform" />
+          </a>
+          <a href="https://facebook.com/tipvoyage" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="bg-[#161616] rounded-full p-2 shadow hover:bg-[#bae800] transition-colors group">
+            <img src="/fb.svg" alt="Facebook" className="w-5 h-5 group-hover:scale-110 transition-transform" />
+          </a>
+          <a href="https://instagram.com/tipvoyage" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="bg-[#161616] rounded-full p-2 shadow hover:bg-[#bae800] transition-colors group">
+            <img src="/insta.svg" alt="Instagram" className="w-5 h-5 group-hover:scale-110 transition-transform" />
+          </a>
+          <a href="https://x.com/tipvoyage" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="bg-[#161616] rounded-full p-2 shadow hover:bg-[#bae800] transition-colors group">
+            <img src="/livesvg.svg" alt="Twitter" className="w-5 h-5 group-hover:scale-110 transition-transform" />
+          </a>
         </div>
       </div>
 
       {/* Divider */}
-      <div className="border-t border-gray-700 my-6"></div>
+      <div className="border-t border-[#161616] my-8" />
 
       {/* Copyright */}
-      <p className="text-center text-xs text-gray-500">
-        © Copyright 2022, All Rights Reserved by ClarityUI
+      <p className="text-center text-xs text-[#888] tracking-wide">
+        © {new Date().getFullYear()}, All Rights Reserved by TIP Voyage
       </p>
-    </section>
+    </footer>
   );
 };
