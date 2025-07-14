@@ -10,6 +10,7 @@ import { ProductsSection } from "../../Sections/ProductsSection/ProductsSection"
 import { ProductsSection as HeroSection } from "../../Sections/herosection/Herosection";
 import { SubscribeSection } from "../../Sections/SubscribeSection/SubscribeSection";
 import { FooterSection } from "../../Sections/FooterSection/FooterSection";
+import { GallerySection } from "../../Sections/GallerySection";
 
 export const Home = (): JSX.Element => {
   const location = useLocation();
@@ -71,6 +72,7 @@ export const Home = (): JSX.Element => {
         <ServicesSection id="services" />
         <About id="about" />
         <CollaborationSection id="collaborations" />
+        <GallerySection id="gallery" />
         <ProductsSection id="products" />
         <SubscribeSection />
       </div>
@@ -80,3 +82,5 @@ export const Home = (): JSX.Element => {
     </div>
   );
 };
+
+export default Home;

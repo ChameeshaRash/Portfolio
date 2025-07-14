@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from 'react-router-dom';
+import { Header } from "../layout/Header";
 
 // Use online images as placeholders
 const images = [
@@ -27,56 +27,37 @@ const images = [
   // Add more as needed
 ];
 
-export const GallerySection = ({ id }: { id?: string }) => {
-  // Update state to hold the selected image object
+export default function AiGalleryPage() {
   const [selected, setSelected] = useState<typeof images[0] | null>(null);
 
-  const handleDownload = (url: string) => {
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "ai-image.jpg";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
-  // Show only 2 rows (e.g., 8 images if 4 columns)
-  const previewImages = images.slice(0, 8);
-
   return (
-    <section id={id} className="w-full px-4 sm:px-6 lg:px-8 xl:px-[20%] py-12">
-      <h2 className="font-display-font-display-lg font-bold text-white text-2xl sm:text-3xl lg:text-[48px] text-center mb-8">
-        AI Image Gallery
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 bento-grid">
-        {previewImages.map((img, i) => (
-          <motion.div
-            key={img.src + i}
-            whileHover={{ scale: 1.03 }}
-            className={`relative rounded-2xl overflow-hidden cursor-pointer group aspect-[4/5] bg-[#181818]`}
-            onClick={() => setSelected(img)}
-          >
-            <img
-              src={img.src}
-              alt={img.alt}
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              draggable={false}
-            />
-            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-              <span className="text-white text-lg font-semibold">View</span>
-            </div>
-          </motion.div>
-        ))}
+    <div className="min-h-screen bg-[#0e0e0e] pb-16">
+      <Header currentPage="home" />
+      <div className="pt-32 px-4 sm:px-6 lg:px-8 xl:px-[20%]">
+        <h1 className="font-display-font-display-lg font-bold text-white text-3xl sm:text-4xl lg:text-[48px] text-center mb-10">
+          AI Images & Videos
+        </h1>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          {images.map((img, i) => (
+            <motion.div
+              key={img.src + i}
+              whileHover={{ scale: 1.03 }}
+              className="relative rounded-2xl overflow-hidden cursor-pointer group bg-[#181818] transition-shadow shadow-lg hover:shadow-2xl aspect-[4/5]"
+              onClick={() => setSelected(img)}
+            >
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                draggable={false}
+              />
+              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span className="text-white text-lg font-semibold">View</span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
-      <div className="flex justify-center mt-8">
-        <Link
-          to="/ai-gallery"
-          className="px-8 py-4 bg-[#BBEB00] text-black font-semibold rounded-lg hover:bg-[#bae800] transition-colors text-lg"
-        >
-          See all AI Images & Videos
-        </Link>
-      </div>
-
       {/* Popup */}
       <AnimatePresence>
         {selected && (
@@ -118,6 +99,6 @@ export const GallerySection = ({ id }: { id?: string }) => {
           </motion.div>
         )}
       </AnimatePresence>
-    </section>
+    </div>
   );
-};
+} 
