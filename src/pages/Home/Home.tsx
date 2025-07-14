@@ -43,7 +43,7 @@ export const Home = (): JSX.Element => {
         {/* Collaboration Section */}
         <CollaborationSection id="collaborations" />
         {/* Event Section */}
-        <EventSection id="event" />
+        {/* <EventSection id="event" /> */}
         {/* Products Section */}
         <ProductsSection id="products" />
         {/* Newsletter Section */}
