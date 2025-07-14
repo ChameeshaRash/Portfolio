@@ -3,6 +3,7 @@ import { Calendar, Clock, MapPin, UserPlus, Check, Users, GraduationCap, Gift } 
 import { Button } from "../../ui/button";
 import { Card, CardContent } from "../../ui/card";
 import { Input } from "../../ui/input";
+import { motion } from 'framer-motion';
 
 export const EventSection = ({ id }: { id?: string }): JSX.Element => {
   const [email, setEmail] = useState("");
@@ -23,11 +24,18 @@ export const EventSection = ({ id }: { id?: string }): JSX.Element => {
   };
 
   return (
-    <section id={id} className="w-full px-4 sm:px-6 lg:px-8 xl:px-[20%]">
+    <motion.section
+      id={id}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: 'easeOut' }}
+      viewport={{ once: false, amount: 0.2 }}
+      className="w-full px-4 sm:px-6 lg:px-8 xl:px-[20%]"
+    >
       <Card className="w-full rounded-2xl overflow-hidden bg-gradient-to-br from-[#2e1818] to-[#1a1a1a] border-none shadow-2xl">
         <CardContent className="p-6 sm:p-8 lg:p-16">
           <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-[#bae800] rounded-full mb-6">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-[#BBEB00] rounded-full mb-6">
               <Calendar className="w-8 h-8 text-black" />
             </div>
             
@@ -39,7 +47,7 @@ export const EventSection = ({ id }: { id?: string }): JSX.Element => {
               Join our exclusive Sinhala AI workshop and learn the latest tools and techniques
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-[#bae800] mb-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-[#BBEB00] mb-8">
               <div className="flex items-center gap-2">
                 <Calendar className="w-5 h-5" />
                 <span className="font-body-font-body-md text-sm sm:text-base">March 15, 2025</span>
@@ -63,7 +71,7 @@ export const EventSection = ({ id }: { id?: string }): JSX.Element => {
                   placeholder="Your Name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full h-12 bg-[#0e0e0e] border border-gray-600 rounded-lg text-white placeholder-gray-400 px-4 focus:border-[#bae800] focus:ring-1 focus:ring-[#bae800]"
+                  className="w-full h-12 bg-[#0e0e0e] border border-gray-600 rounded-lg text-white placeholder-gray-400 px-4 focus:border-[#BBEB00] focus:ring-1 focus:ring-[#BBEB00]"
                   required
                 />
               </div>
@@ -74,14 +82,14 @@ export const EventSection = ({ id }: { id?: string }): JSX.Element => {
                   placeholder="your@email.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full h-12 bg-[#0e0e0e] border border-gray-600 rounded-lg text-white placeholder-gray-400 px-4 focus:border-[#bae800] focus:ring-1 focus:ring-[#bae800]"
+                  className="w-full h-12 bg-[#0e0e0e] border border-gray-600 rounded-lg text-white placeholder-gray-400 px-4 focus:border-[#BBEB00] focus:ring-1 focus:ring-[#BBEB00]"
                   required
                 />
               </div>
 
               <Button
                 type="submit"
-                className="w-full h-12 bg-[#bae800] hover:bg-[#a5cf00] text-black font-semibold rounded-lg transition-colors flex items-center justify-center gap-2"
+                className="w-full h-12 bg-[#BBEB00] hover:bg-[#a5cf00] text-black font-semibold rounded-lg transition-colors flex items-center justify-center gap-2"
               >
                 <UserPlus className="w-5 h-5" />
                 Sign Up for Event
@@ -104,17 +112,17 @@ export const EventSection = ({ id }: { id?: string }): JSX.Element => {
           <div className="mt-8 pt-6 border-t border-gray-600">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
               <div className="flex flex-col items-center">
-                <Users className="w-8 h-8 text-[#bae800] mb-2" />
+                <Users className="w-8 h-8 text-[#BBEB00] mb-2" />
                 <span className="text-white font-semibold">50+ Attendees</span>
                 <span className="text-gray-400 text-sm">Expected</span>
               </div>
               <div className="flex flex-col items-center">
-                <GraduationCap className="w-8 h-8 text-[#bae800] mb-2" />
+                <GraduationCap className="w-8 h-8 text-[#BBEB00] mb-2" />
                 <span className="text-white font-semibold">Expert Speakers</span>
                 <span className="text-gray-400 text-sm">Industry Leaders</span>
               </div>
               <div className="flex flex-col items-center">
-                <Gift className="w-8 h-8 text-[#bae800] mb-2" />
+                <Gift className="w-8 h-8 text-[#BBEB00] mb-2" />
                 <span className="text-white font-semibold">Free Resources</span>
                 <span className="text-gray-400 text-sm">Templates & Tools</span>
               </div>
@@ -122,6 +130,6 @@ export const EventSection = ({ id }: { id?: string }): JSX.Element => {
           </div>
         </CardContent>
       </Card>
-    </section>
+    </motion.section>
   );
 };

@@ -31,7 +31,7 @@ export const SocialMediaBar = (): JSX.Element => {
   return (
     <div
       className="z-30 fixed
-        top-0 left-0 right-0 w-full flex flex-row justify-center items-center gap-3 px-4 py-2 bg-[#bae800] rounded-b-2xl shadow-lg
+        top-0 left-0 right-0 w-full flex flex-row justify-center items-center gap-3 px-4 py-2 bg-[#BBEB00] rounded-b-2xl shadow-lg
         sm:top-1/2 sm:right-4 sm:left-auto sm:w-auto sm:flex-col sm:items-center sm:gap-4 sm:px-3 sm:py-4 sm:rounded-2xl
         sm:transform sm:-translate-y-1/2
         sm:bottom-auto sm:translate-x-0

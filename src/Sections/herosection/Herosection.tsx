@@ -9,7 +9,7 @@ export const ProductsSection = ({ id }: { id?: string }): JSX.Element => {
         <header className="flex flex-col items-center gap-4 lg:gap-6 w-full max-w-5xl">
           <h1 className="font-display-font-display-xxl font-bold text-center text-5xl sm:text-10xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight">
             <span className="text-white">Your </span>
-            <span className="text-[#bae800]">Sinhala</span>
+            <span className="text-[#BBEB00]">Sinhala</span>
             <span className="text-white"> Guide to the AI Revolution</span>
           </h1>
 
@@ -24,7 +24,7 @@ export const ProductsSection = ({ id }: { id?: string }): JSX.Element => {
         <div className="flex items-center justify-center w-full">
           <Button
             variant="outline"
-            className="group flex items-center justify-center gap-3 lg:gap-4 rounded-full border border-solid border-[#ff5252] bg-transparent transition-colors duration-300 hover:bg-[#ff0000]/90 hover:border-[#ff0000]"
+            className="group flex items-center justify-center gap-3 lg:gap-4 rounded-full border border-solid border-[#ff5252] bg-transparent transition-colors duration-300 hover:bg-[#ff0000]/90 hover:border-[#ff0000] !hover:bg-[#ff0000]/90 !hover:text-white"
             style={{ padding: '16px 32px', height: 'auto', width: 'auto' }}
             onClick={() => window.open("https://www.youtube.com/@TipVoyage", "_blank", "noopener,noreferrer")}
           >

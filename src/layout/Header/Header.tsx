@@ -102,8 +102,8 @@ export const Header = ({ currentPage = 'home' }: HeaderProps): JSX.Element => {
                   {item.sectionId ? (
                     <button
                       onClick={() => handleNavClick(item)}
-                      className={`font-body-font-body-md hover:text-[#bae800] transition-colors whitespace-nowrap ${
-                        activeSection === item.sectionId ? 'text-[#bae800]' : 'text-white'
+                      className={`font-body-font-body-md hover:text-[#BBEB00] transition-colors whitespace-nowrap ${
+                        activeSection === item.sectionId ? 'text-[#BBEB00]' : 'text-white'
                       }`}
                     >
                       {item.label}
@@ -111,8 +111,8 @@ export const Header = ({ currentPage = 'home' }: HeaderProps): JSX.Element => {
                   ) : (
                     <Link
                       to={item.href}
-                      className={`font-body-font-body-md hover:text-[#bae800] transition-colors whitespace-nowrap ${
-                        (currentPage === 'linktree' && item.label === 'Ai Links') ? 'text-[#bae800]' : 'text-white'
+                      className={`font-body-font-body-md hover:text-[#BBEB00] transition-colors whitespace-nowrap ${
+                        (currentPage === 'linktree' && item.label === 'Ai Links') ? 'text-[#BBEB00]' : 'text-white'
                       }`}
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
@@ -125,7 +125,7 @@ export const Header = ({ currentPage = 'home' }: HeaderProps): JSX.Element => {
           </NavigationMenu>
 
           {/* Desktop Contact Button */}
-          <Button className="hidden lg:flex items-center gap-2 px-4 py-2 bg-[#bae800] text-black rounded hover:bg-[#a5cf00] transition-colors">
+          <Button className="hidden lg:flex items-center gap-2 px-5 py-4 bg-[#BBEB00] text-black rounded-full hover:bg-[#a5cf00] transition-colors">
             <span className="font-body-font-body-md whitespace-nowrap">
               Contact us
             </span>
@@ -135,7 +135,7 @@ export const Header = ({ currentPage = 'home' }: HeaderProps): JSX.Element => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMobileMenu}
-            className="lg:hidden flex items-center justify-center w-10 h-10 text-white hover:text-[#bae800] transition-colors"
+            className="lg:hidden flex items-center justify-center w-10 h-10 text-white hover:text-[#BBEB00] transition-colors"
             aria-label="Toggle mobile menu"
           >
             {isMobileMenuOpen ? (

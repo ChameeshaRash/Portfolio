@@ -2,6 +2,7 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "../../ui/button";
 import { Card, CardContent } from "../../ui/card";
+import { motion } from 'framer-motion';
 
 export const ServicesSection = ({ id }: { id?: string }): JSX.Element => {
   const services = [
@@ -32,8 +33,12 @@ export const ServicesSection = ({ id }: { id?: string }): JSX.Element => {
   ];
 
   return (
-    <section
+    <motion.section
       id={id}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: 'easeOut' }}
+      viewport={{ once: false, amount: 0.2 }}
       className="flex flex-col items-start gap-6 lg:gap-12 p-4 sm:p-6 lg:p-8 relative w-full rounded-2xl overflow-hidden xl:px-[20%]"
     >
       <h2 className="relative w-full font-headings-font-heading-xl font-bold text-white text-xl sm:text-2xl lg:text-[36px] text-center">
@@ -44,7 +49,7 @@ export const ServicesSection = ({ id }: { id?: string }): JSX.Element => {
         {services.map((service, index) => (
           <Card
             key={index}
-            className="flex flex-col h-full bg-[#161616] rounded-lg border-none overflow-hidden hover:bg-[#1a1a1a] transition-colors"
+            className="flex flex-col h-full bg-[#0E0E0E] rounded-lg border-none overflow-hidden hover:bg-[#1a1a1a] transition-colors"
           >
             <div className="flex items-center justify-center p-4 sm:p-6 min-h-[180px] sm:min-h-[200px] lg:min-h-[232px]">
               <img
@@ -65,7 +70,7 @@ export const ServicesSection = ({ id }: { id?: string }): JSX.Element => {
                 </p>
               </div>
 
-              <Button className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 lg:px-8 py-2 sm:py-3 bg-[#bae800] rounded-full text-black hover:bg-[#a5cf00] transition-colors mt-auto">
+              <Button className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 lg:px-8 py-2 sm:py-3 bg-[#BBEB00] rounded-full text-black hover:bg-[#a5cf00] transition-colors mt-auto">
                 <span className="font-body-font-body-sm text-sm whitespace-nowrap">
                   {service.buttonText}
                 </span>
@@ -75,6 +80,6 @@ export const ServicesSection = ({ id }: { id?: string }): JSX.Element => {
           </Card>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };

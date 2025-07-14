@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Header } from "../../layout/Header";
 import { SocialMediaBar } from "../../layout/SocialMediaBar";
@@ -14,6 +14,40 @@ import { FooterSection } from "../../Sections/FooterSection/FooterSection";
 export const Home = (): JSX.Element => {
   const location = useLocation();
 
+  // Single blob state
+  const [blobPos, setBlobPos] = useState({ x: 0, y: 0 });
+  const blobRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      let width = 192, height = 192;
+      if (blobRef.current) {
+        const rect = blobRef.current.getBoundingClientRect();
+        width = rect.width;
+        height = rect.height;
+      }
+      setBlobPos({ x: e.clientX - width / 2, y: e.clientY - height / 2 });
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
+  const blobStyle: React.CSSProperties = {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    zIndex: 50,
+    pointerEvents: 'none',
+    width: '12rem', // w-48
+    height: '12rem', // h-48
+    background: '#BBEB00',
+    borderRadius: '9999px',
+    filter: 'blur(100px)',
+    opacity: 0.2,
+    transform: `translate3d(${blobPos.x}px, ${blobPos.y}px, 0)`,
+    transition: 'transform 0.08s linear',
+  };
+
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const scrollTo = params.get("scrollTo");
@@ -27,13 +61,11 @@ export const Home = (): JSX.Element => {
 
   return (
     <div className="flex flex-col min-h-screen bg-[#0e0e0e] overflow-hidden relative">
+      {/* Single, visible, cursor-following blob */}
+      <div ref={blobRef} style={blobStyle} />
       {/* Header */}
       <Header currentPage="home" />
       <div className="flex-1 flex flex-col items-center gap-8 sm:gap-12 lg:gap-[100px] pt-[100px] sm:pt-[120px] lg:pt-[236px] pb-0">
-        {/* Background effects */}
-        <div className="top-[200px] sm:top-[300px] lg:top-[512px] right-[20px] sm:right-[50px] lg:left-[1188px] opacity-70 absolute w-24 h-24 sm:w-32 sm:h-32 lg:w-64 lg:h-64 bg-[#bae800] rounded-full blur-[100px] sm:blur-[150px] lg:blur-[250px]" />
-        <div className="top-[80px] sm:top-[100px] lg:top-[170px] left-[-10px] sm:left-[-20px] lg:left-[-41px] opacity-[0.46] absolute w-24 h-24 sm:w-32 sm:h-32 lg:w-64 lg:h-64 bg-[#bae800] rounded-full blur-[100px] sm:blur-[150px] lg:blur-[250px]" />
-
         {/* Hero Section */}
         <HeroSection id="home" />
         <ServicesSection id="services" />

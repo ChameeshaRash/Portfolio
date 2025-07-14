@@ -1,14 +1,28 @@
 import React from "react";
 import { Card, CardContent } from "../../ui/card";
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
+import { motion } from 'framer-motion';
 
 export const TestimonialsSection = ({ id }: { id?: string }): JSX.Element => {
   return (
-    <section id={id} className="pt-10 overflow-hidden md:pt-0 sm:pt-16 2xl:pt-16">
-      <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+    <motion.section
+      id={id}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: 'easeOut' }}
+      viewport={{ once: false, amount: 0.2 }}
+      className="pt-10 overflow-hidden md:pt-0 sm:pt-16 2xl:pt-16"
+    >
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }}
+        viewport={{ once: false, amount: 0.2 }}
+        className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl"
+      >
         <div className="grid items-center grid-cols-1 md:grid-cols-2">
           <div>
-            <h2 className="text-3xl font-bold leading-tight text-[#bae800] sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl font-bold leading-tight text-[#BBEB00] sm:text-4xl lg:text-5xl">
               Hey 👋 I am <br className="block sm:hidden" />
               Chameesha Rashani
             </h2>
@@ -66,7 +80,7 @@ export const TestimonialsSection = ({ id }: { id?: string }): JSX.Element => {
             />
           </div>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
