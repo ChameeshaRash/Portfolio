@@ -2,54 +2,40 @@ import React from "react";
 import { Card, CardContent } from "../../ui/card";
 
 export const FooterSection = (): JSX.Element => {
-  const products = [
-    {
-      image: "/rectangle-1.png",
-      title: "T-shirts",
-    },
-    {
-      image: "/rectangle-1-1.png",
-      title: "templates",
-    },
-    {
-      image: "/rectangle-1-2.png",
-      title: "E-Book",
-    },
-  ];
 
   return (
-    <section className="flex flex-col items-center gap-6 lg:gap-[59px] w-full px-4 sm:px-6 lg:px-8 xl:px-[20%]">
-      <h2 className="font-display-font-display-lg font-bold text-white text-xl sm:text-2xl lg:text-[48px] text-center">
-        Products
-      </h2>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 w-full max-w-6xl">
-        {products.map((product, index) => (
-          <Card
-            key={index}
-            className="flex flex-col w-full max-w-[364px] mx-auto bg-[#161616] rounded-xl border-none overflow-hidden hover:bg-[#1a1a1a] transition-colors"
-          >
-            <CardContent className="flex flex-col items-start gap-4 p-4 sm:p-6">
-              <img
-                className="w-full h-[200px] sm:h-[250px] lg:h-[371px] object-cover rounded-lg"
-                alt={product.title}
-                src={product.image}
-              />
-              <h3 className="font-headings-font-heading-sm font-semibold text-white text-base sm:text-lg lg:text-[20px]">
-                {product.title}
-              </h3>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-      {/* Real Footer Bar */}
-      <div className="w-full bg-[#161616] mt-8">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-[20%]">
-          <div className="py-4 lg:py-6 font-body-font-body-md text-[#d6d6d6] text-sm lg:text-[16px] text-center">
-            © 2025 Tip Voyage. All rights reserved.
+    <section className="bg-[#0B1120] text-white py-10">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center md:items-start gap-6">
+        {/* Logo & Nav */}
+        <div className="flex flex-col items-center md:items-start">
+          <div className="flex items-center space-x-2">
+            <div className="w-4 h-4 rounded-full bg-blue-600"></div>
+            <span className="text-lg font-semibold">ClarityUI</span>
           </div>
+          <nav className="mt-4 flex space-x-6 text-sm text-gray-300">
+            <a href="#">Product</a>
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">Resources</a>
+          </nav>
+        </div>
+
+        {/* Social Icons */}
+        <div className="flex space-x-4">
+          <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-twitter"></i></a>
+          <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-facebook-f"></i></a>
+          <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-instagram"></i></a>
+          <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-github"></i></a>
         </div>
       </div>
+
+      {/* Divider */}
+      <div className="border-t border-gray-700 my-6"></div>
+
+      {/* Copyright */}
+      <p className="text-center text-xs text-gray-500">
+        © Copyright 2022, All Rights Reserved by ClarityUI
+      </p>
     </section>
   );
 };

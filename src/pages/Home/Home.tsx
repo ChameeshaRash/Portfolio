@@ -36,20 +36,12 @@ export const Home = (): JSX.Element => {
 
         {/* Hero Section */}
         <HeroSection id="home" />
-        {/* Services Section */}
         <ServicesSection id="services" />
-        {/* About Section */}
         <About id="about" />
-        {/* Collaboration Section */}
         <CollaborationSection id="collaborations" />
-        {/* Event Section */}
-        {/* <EventSection id="event" /> */}
-        {/* Products Section */}
         <ProductsSection id="products" />
-        {/* Newsletter Section */}
         <SubscribeSection />
       </div>
-      {/* Footer Section always at the bottom */}
       <FooterSection />
       {/* Social Media Bar */}
       <SocialMediaBar />
