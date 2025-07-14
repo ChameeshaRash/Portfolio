@@ -1,0 +1,148 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --body-font-body-lg-font-family: "Satoshi", Helvetica;
+  --body-font-body-lg-font-size: 18px;
+  --body-font-body-lg-font-style: normal;
+  --body-font-body-lg-font-weight: 500;
+  --body-font-body-lg-letter-spacing: 0px;
+  --body-font-body-lg-line-height: 28px;
+  --body-font-body-md-font-family: "Satoshi", Helvetica;
+  --body-font-body-md-font-size: 16px;
+  --body-font-body-md-font-style: normal;
+  --body-font-body-md-font-weight: 400;
+  --body-font-body-md-letter-spacing: 0px;
+  --body-font-body-md-line-height: 26px;
+  --body-font-body-sm-font-family: "Satoshi", Helvetica;
+  --body-font-body-sm-font-size: 14px;
+  --body-font-body-sm-font-style: normal;
+  --body-font-body-sm-font-weight: 400;
+  --body-font-body-sm-letter-spacing: 0px;
+  --body-font-body-sm-line-height: 22px;
+  --display-font-display-lg-font-family: "Manrope", Helvetica;
+  --display-font-display-lg-font-size: 48px;
+  --display-font-display-lg-font-style: normal;
+  --display-font-display-lg-font-weight: 700;
+  --display-font-display-lg-letter-spacing: 0px;
+  --display-font-display-lg-line-height: 56px;
+  --display-font-display-xl-font-family: "Manrope", Helvetica;
+  --display-font-display-xl-font-size: 64px;
+  --display-font-display-xl-font-style: normal;
+  --display-font-display-xl-font-weight: 700;
+  --display-font-display-xl-letter-spacing: 0px;
+  --display-font-display-xl-line-height: 72px;
+  --display-font-display-xxl-font-family: "Satoshi", Helvetica;
+  --display-font-display-xxl-font-size: 80px;
+  --display-font-display-xxl-font-style: normal;
+  --display-font-display-xxl-font-weight: 700;
+  --display-font-display-xxl-letter-spacing: 0px;
+  --display-font-display-xxl-line-height: 80px;
+  --headings-font-heading-sm-font-family: "Manrope", Helvetica;
+  --headings-font-heading-sm-font-size: 20px;
+  --headings-font-heading-sm-font-style: normal;
+  --headings-font-heading-sm-font-weight: 600;
+  --headings-font-heading-sm-letter-spacing: 0px;
+  --headings-font-heading-sm-line-height: 28px;
+  --headings-font-heading-xl-font-family: "Manrope", Helvetica;
+  --headings-font-heading-xl-font-size: 36px;
+  --headings-font-heading-xl-font-style: normal;
+  --headings-font-heading-xl-font-weight: 700;
+  --headings-font-heading-xl-letter-spacing: 0px;
+  --headings-font-heading-xl-line-height: 44px;
+  --lable-caption-font-caption-font-family: "Manrope", Helvetica;
+  --lable-caption-font-caption-font-size: 10px;
+  --lable-caption-font-caption-font-style: normal;
+  --lable-caption-font-caption-font-weight: 400;
+  --lable-caption-font-caption-letter-spacing: 0px;
+  --lable-caption-font-caption-line-height: 16px;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: transparent;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: transparent;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}

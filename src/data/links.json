@@ -1,0 +1,44 @@
+{
+  "links": [
+    {
+      "id": 1,
+      "title": "AI Video Creation Tools",
+      "description": "Best tools for creating AI-powered videos",
+      "url": "https://example.com/ai-video-tools",
+      "category": "AI Tools",
+      "icon": "solar:video-frame-play-vertical-bold"
+    },
+    {
+      "id": 2,
+      "title": "Sinhala AI Resources",
+      "description": "Comprehensive guide to AI resources in Sinhala",
+      "url": "https://example.com/sinhala-ai",
+      "category": "Resources",
+      "icon": "solar:book-bookmark-bold"
+    },
+    {
+      "id": 3,
+      "title": "Brand Promotion Guide",
+      "description": "Complete guide for AI-driven brand promotion",
+      "url": "https://example.com/brand-promotion",
+      "category": "Marketing",
+      "icon": "solar:megaphone-bold"
+    },
+    {
+      "id": 4,
+      "title": "Live Session Schedule",
+      "description": "Join our upcoming AI workshops and sessions",
+      "url": "https://example.com/live-sessions",
+      "category": "Events",
+      "icon": "solar:calendar-bold"
+    },
+    {
+      "id": 5,
+      "title": "AI Templates Collection",
+      "description": "Ready-to-use templates for your AI projects",
+      "url": "https://example.com/templates",
+      "category": "Templates",
+      "icon": "solar:document-text-bold"
+    }
+  ]
+}
